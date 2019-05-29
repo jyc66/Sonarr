@@ -173,7 +173,7 @@ namespace NzbDrone.Core.Download.Clients.Transmission
                 "seedRatioLimit",
                 "seedRatioMode",
                 "seedIdleLimit",
-                "seedidleMode",
+                "seedIdleMode",
                 "fileCount"
             };
 
