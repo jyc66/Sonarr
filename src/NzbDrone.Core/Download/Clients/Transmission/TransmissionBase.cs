@@ -73,7 +73,7 @@ namespace NzbDrone.Core.Download.Clients.Transmission
                     item.RemainingTime = TimeSpan.FromSeconds(torrent.Eta);
                 }
 
-                if (!torrent.ErrorString.IsNullOrWhiteSpace())
+                if (!torrent.ErrorString.IsNullOrWhiteSpace() && torrent.ErrorString.IndexOf("Tracker is unable to connect to") == -1 )
                 {
                     item.Status = DownloadItemStatus.Warning;
                     item.Message = torrent.ErrorString;
